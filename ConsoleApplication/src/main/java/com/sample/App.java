@@ -51,6 +51,29 @@ public class App
     				books.add(book);
     				break;
     			case 2:
+    				System.out.print("Enter Book number: ");
+    				int no2 = sc.nextInt();
+    				
+    				if(!books.isEmpty()) {
+    					Iterator<Books> itr1 = books.iterator();
+    					while(itr1.hasNext()) {
+    						Books b = itr1.next();
+    						if(b.getBookNo() == no2) {
+    							System.out.println(b.toString());
+    							flag = true;
+    							break;
+    						} else {
+    							flag = false;
+    						}
+    					}
+    					
+    					if(flag == false) {
+    						System.out.println("Book with id: " + no2 + " not found");
+    					}
+    				} else {
+    					System.out.println("List empty");
+    				}
+    				break;
     			case 3:
     				System.out.print("Enter Book number: ");
     				int no1 = sc.nextInt();
