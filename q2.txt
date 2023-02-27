@@ -1,0 +1,1 @@
+Create 2 classes called Authors and Books. Using composition create a list of books for Authors. Create a HashMap which will display a list of authors (1 key = 1 author). The program has to be menu based

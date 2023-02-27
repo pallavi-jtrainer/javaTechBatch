@@ -1,0 +1,3 @@
+Create a Bank account interface with 2 methods for deposit and withdrawal. Create 2 classes SAvingsAccount and CurrentAccount which implement the above interface. The attributes in these classes are account_no and balance. Add a method to display the balance along with the account details.
+Create a class for Customer with attributes for customer number, name and account numbers for that customer. Register a customer if he is not in the array.
+Store all details into object arrays. Make the program menu based.
