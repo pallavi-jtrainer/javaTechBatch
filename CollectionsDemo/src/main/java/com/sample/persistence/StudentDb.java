@@ -1,11 +1,13 @@
 package com.sample.persistence;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +28,7 @@ public class StudentDb {
 //	}
 	
 	public static String insertStudentDetails(Student s) {
-		String sql = "INSERT INTO STUDENT (STUDENTNAME, AGE) VALUES (?, ?)";
+		String sql = "INSERT INTO STUDENT (STUDENTNAME, AGE, DOB) VALUES (?, ?, ?)";
 		String ans = "Not able to insert student details";
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -35,6 +37,9 @@ public class StudentDb {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, s.getName());
 			ps.setInt(2, s.getAge());
+			
+			Date dob = Date.valueOf(s.getDob());
+			ps.setDate(3, dob);
 			
 			int res = ps.executeUpdate();
 			if(res > 0) {
@@ -67,6 +72,9 @@ public class StudentDb {
 				s.setStudentId(rs.getInt("STUDENTID"));
 				s.setName(rs.getString("STUDENTNAME"));
 				s.setAge(rs.getInt("AGE"));
+				Date d = rs.getDate("DOB");
+				LocalDate ld = d.toLocalDate();
+				s.setDob(ld);
 				
 				students.add(s);
 			}
