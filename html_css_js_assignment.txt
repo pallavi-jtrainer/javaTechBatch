@@ -1,0 +1,20 @@
+Create the front - end for a Student Management System of DummyForDummies College. 
+
+The Students should be able to login to the system to do the following:
+1. Should be able to view the course work
+2. Should be able to upload completed assignments
+3. Should be able to update their profile
+4. Should be able to communicate with any faculty through a chat interface
+
+The Faculty should be able to login to the system to do the following:
+1. should be able to upload assignment questions
+2. download completed assignments
+3. upload the grades for the assignment
+4. provide individual feedback
+5. answer queries through chat.
+
+The technologies to be used to create this web ui are:
+HTML
+JavaScript
+jQuery
+CSS
