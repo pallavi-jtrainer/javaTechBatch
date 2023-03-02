@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>JSDemo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+<body>
+    <div>
+        <!-- <form action="data.html" method="post">
+            <label>Name: </label>
+            <input type="text" id="fname"/>
+            <input type="submit" id="submit">
+        </form> -->
+        <form id="myForm">
+            <div>
+                <label>First Name: </label>
+                <input type="text" id="fname" required/>
+            </div>
+            <div>
+                <label>Last Name: </label>
+                <input type="text" id="lname" required/>
+            </div>
+            <div>
+                <label>Email: </label>
+                <input type="email" id="email" minlength="14" required style="margin-left: 37px"
+                placeholder="Email should be xxxx@xxxx.xxx"/>
+            </div>
+            <div>
+                <label>Phone: </label>
+                <input type="tel" id="phone" minlength="10" maxlength="13" required style="margin-left: 37px"
+                placeholder="Phone should be +xx-xxxxxxxxxx or +xx xxxxxxxxxx"/>
+            </div>
+            <input type="submit" id="submit">
+        </form>
+        <!-- <span role="alert" aria-hidden="true" id="error">
+            Please enter name.
+        </span> -->
+    </div>
+    <script src="script1.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+#error {
+    display: none;
+    font-size: x-small;
+}
+
+#error.visible {
+    display: block;
+}
+
+input.invalid {
+    border-color: red;
+}
+
+div {
+    margin-bottom: 19px;
+}
+
+#myForm {
+    margin-left: 16%;
+    margin-top: 2%;
+    font-size: 22px;
+}
+
+label {
+    font-size: large;
+}
+
+#fname, #lname, #email, #phone {
+    width:35%;
+}
+
+.header {
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 45px;
+}
+
+.para {
+    font-size: 45px;
+    color:darkgreen;
+}

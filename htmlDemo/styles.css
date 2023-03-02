@@ -1,0 +1,25 @@
+*{
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+.container {
+    align-items: center;
+}
+
+.div1 {
+    display: flex;
+    padding-left: 8pt;
+}
+
+a:visited {
+    color:blue;
+}
+
+input:focus {
+    background-color: darkseagreen;
+}
+
+div > div > div:first-child label {
+    color:red;
+}

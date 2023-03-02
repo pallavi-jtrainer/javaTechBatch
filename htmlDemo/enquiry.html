@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Enquiry Form</title>
+
+</head>
+<body class="container">
+    <div>
+        <form id="myform" method="post" action="submit">
+            <div class="div1">
+                <div>
+                    <div>
+                        <label for="fname">First Name:</label>
+                    </div>
+                    <div>
+                        <input type="text" name="fname" id="fname" required/>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label for="lname">Last</label> Name:</label>
+                    </div>
+                    <div>
+                        <input type="text" name="lname" id="lname" required style="width: 27%"/>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <div>
+                    <label for="email">Email:</label>
+                </div>
+                <div>
+                    <input type="email" name="email" id="email"/>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <label for="enquiry">Your Enquiry:</label>
+                </div>
+                <div>
+                    <textarea cols="20" rows="20"></textarea>
+                </div>
+            </div>
+
+            <div>
+                <button>Submit</button>
+            </div>
+        </form>
+    </div>
+    <div>
+        <a href="#">Back to Home</a>
+    </div>
+</body>
+</html>
