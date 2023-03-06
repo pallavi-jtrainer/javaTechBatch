@@ -1,0 +1,41 @@
+<div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Student Portal</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Profile <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" (click)="goToAllStudents()">List All Students</a>
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="container">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Student Details</h1>
+      <table *ngIf="student" class="table table-striped table-dark">
+        <tr>
+          <td>Student Id: </td>
+          <td>{{ student.studentId }}</td>
+        </tr>
+        <tr>
+          <td>Student Name: </td>
+          <td>{{ student.studentName }}</td>
+        </tr>
+        <tr>
+          <td>Email: </td>
+          <td>{{student.email}}</td>
+        </tr>
+        <tr>
+          <td>Contact #</td>
+          <td>{{student.contact}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

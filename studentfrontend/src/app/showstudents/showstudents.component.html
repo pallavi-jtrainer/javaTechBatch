@@ -1,0 +1,38 @@
+<div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Student Portal</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" (click)="showProfile()">Profile <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active">List All Students</a>
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="container-fluid">
+  <div>
+    <table class="table table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <td>Student Id</td>
+          <td>Student Name</td>
+          <td>Email</td>
+          <td>Contact</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let s of students">
+          <td>{{s.studentId}}</td>
+          <td>{{s.studentName}}</td>
+          <td>{{s.email}}</td>
+          <td>{{s.contact}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
