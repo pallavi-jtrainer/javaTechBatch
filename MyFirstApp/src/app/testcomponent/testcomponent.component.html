@@ -1,0 +1,47 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead class="thead bg-dark" style="color:cornsilk;">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Dept Id</th>
+        <th>Date of Joining</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of employees" [ngSwitch]="e.dept">
+        <td>
+          <span *ngSwitchCase="1" [ngStyle]="{'color': 'blue',
+           'font-style': 'italic'}">
+          {{e.id}}
+          </span>
+          <span *ngSwitchCase="2" [ngStyle]="{'color': 'darkgreen',
+            'font-style': 'italic'}">
+            {{e.id}}
+          </span>
+          <span *ngSwitchCase="3" [ngClass]="{'red': showClass}">
+          {{e.id}}
+        </span>
+        </td>
+        <td>
+          <span *ngSwitchCase="1" [ngStyle]="{'color': 'blue',
+           'font-style': 'italic'}">
+          {{e.name | propercase: false }}
+          </span>
+          <span *ngSwitchCase="2" [ngStyle]="{'color': 'darkgreen',
+            'font-style': 'italic'}">
+            {{e.name | propercase: false }}
+          </span>
+          <span *ngSwitchCase="3" [ngStyle]="{'color': 'red',
+           'font-style': 'italic'}">
+          {{e.name | propercase: false }}
+        </span>
+        </td>
+        <td>{{e.salary | currency: 'INR'}}</td>
+        <td>{{e.dept}}</td>
+        <td>{{e.doj | date : 'fullDate'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

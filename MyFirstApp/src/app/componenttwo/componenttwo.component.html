@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="card" style="margin-top: 3%;">
+    <div class="card-header bg-primary">
+      <h3 class="card-title text-light">
+        Personal Details
+      </h3>
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="form-group">
+          <span style="margin-right: 43px;">
+            <label class="font-weight-bold" for="fname">First Name</label>
+          </span>
+          <input type="text" name="fname" class="form-control" placeholder="FirstName"
+            [(ngModel)]="fname">
+        </div>
+
+        <div class="form-group">
+          <span style="margin-right: 43px;">
+            <label class="font-weight-bold" for="lname">Last Name</label>
+          </span>
+          <input type="text" name="lname" class="form-control" placeholder="LastName"
+            [(ngModel)]="lname">
+        </div>
+
+        <div class="form-group">
+          <span style="margin-right: 43px;">
+            <label class="font-weight-bold" for="email">Email:</label>
+          </span>
+          <input type="email" name="email" class="form-control" placeholder="abc@xyz.com"
+          [(ngModel)]="email">
+        </div>
+
+        <div class="form-group">
+          <span style="margin-right: 43px;">
+            <label class="font-weight-bold" for="phone">Contact No: </label>
+          </span>
+          <input type="tel" name="phone" class="form-control" placeholder="0123456789"
+          [(ngModel)]="phone">
+        </div>
+
+        <button class="btn btn-outline-success">Submit</button>
+      </form>
+    </div>
+
+  </div>
+  {{ fname }}
+</div>
+
+
+
+
