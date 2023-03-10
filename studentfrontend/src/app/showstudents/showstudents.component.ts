@@ -36,4 +36,8 @@ export class ShowstudentsComponent implements OnInit {
   showProfile() {
     this.router.navigate(['/student', this.id]);
   }
+
+  showStudentDetails(id: number) {
+    this.router.navigate(['/student', id]);
+  }
 }

@@ -6,7 +6,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#">Profile <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active">Profile <span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link" (click)="goToAllStudents()">List All Students</a>
         <a class="nav-item nav-link" (click)="logout()">Logout</a>
       </div>
@@ -36,6 +36,24 @@
           <td>{{student.contact}}</td>
         </tr>
       </table>
+    </div>
+    <div>
+      <button class="btn btn-dark" (click)="toggle()" style="margin-left: 4%;">Reset Password</button>
+    </div>
+    <br>
+    <div *ngIf="show" style="margin-left: 6%; margin-right: 62%;">
+      <div class="form-group">
+        <label>New Password</label>
+        <input type="password" name="pass" class="form-control" [(ngModel)]="pass">
+      </div>
+      <div class="form-group">
+        <label>Confirm Password</label>
+        <input type="password" name="confirm" class="form-control" [(ngModel)]="confirm">
+      </div>
+      <div>
+        <button class="btn btn-success" (click)="updatePassword(student.studentId)">Update Password</button>
+        <button class="btn btn-danger" style="margin-left: 4%;" (click)="cancelUpdate()">Cancel</button>
+      </div>
     </div>
   </div>
 </div>

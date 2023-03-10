@@ -11,6 +11,9 @@ import { Component, OnInit } from '@angular/core';
 export class StudentdetailsComponent implements OnInit {
   id: any;
   student: Student = new Student();
+  show = false;
+  pass = '';
+  confirm = '';
 
   constructor(private router: Router, private route: ActivatedRoute,
       private studentService: StudentserviceService) { }
@@ -23,7 +26,7 @@ export class StudentdetailsComponent implements OnInit {
   loadData(id: number) {
     this.studentService.getStudentById(id)
     .subscribe(data => {
-      console.log(data);
+      console.log("Load Data: ", data);
       this.student = data;
     }, error => {
       console.log(error);
@@ -36,5 +39,35 @@ export class StudentdetailsComponent implements OnInit {
 
   goToAllStudents() {
     this.router.navigate(['/students', this.id]);
+  }
+
+  toggle() {
+    this.show = !this.show;
+  }
+
+  cancelUpdate() {
+    this.pass = '';
+    this.confirm = '';
+    this.show = false;
+  }
+
+  updatePassword(id: number) {
+    if (this.pass == this.confirm) {
+      this.student.password = this.pass;
+      this.studentService.updatePassword(this.student)
+      .subscribe(data => {
+        console.log(data);
+        if(data != null) {
+          alert("Password update successful");
+          window.location.reload();
+        }
+      })
+      //alert("Update done");
+      this.show = false;
+    } else {
+      alert("Password mismatch");
+      this.pass = '';
+      this.confirm = '';
+    }
   }
 }
